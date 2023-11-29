@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //13.find the sum of the number which are divisible by 4,8,10
+        length=parseInt(prompt("Enter the length"))
+        a=[]
+        for (i=0;i<length;i++){
+           value=parseInt(prompt("Enter the value "))
+            a.push(value)
+            
+
+        }
+        console.log(a)
+        sum=0
+        for (i of a){
+            if(i%4==0 && i%8==0 && i%10==0){
+               sum+=i
+            }
+        }
+        console.log(sum)
+    </script>
+</body>
+</html>

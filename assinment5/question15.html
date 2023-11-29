@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //15.add the elements to array only numbers which are not even and which are not divisible by 10?
+        array=[]
+        length=parseInt(prompt("Enter the length"))
+          
+        for(i=0;i<length;i++){
+         value=parseInt(prompt("Enter the value"))
+         if(value%10!=0 && value%2==1){
+             array.push(value)
+         }
+        }
+        console.log("Element of odd",array)
+    </script>
+</body>
+</html>

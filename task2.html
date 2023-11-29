@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body{
+         display: flex;
+         justify-content: center;
+         height: 80vh;
+         align-items: center;
+      }
+      h2{
+         color:rgb(85, 0, 255);
+         font-size: 30px;
+         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+    
+     #container{
+        background-color: rgb(102, 255, 0);
+        width: 600px;
+        height: 320px;
+        text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         padding: 15px 15px;
+         color: rgb(223, 65, 65);
+         box-shadow: 5px 5px 10px 10px green;
+     }
+     #quate{
+       line-height: 35px;
+       font-size: 20px;
+     }
+     #author{
+      font-size: 18px;
+     }
+     button{
+      width: 150px;
+      height: 40px;
+      border: none;
+      color: white;
+      background-color: blue;
+      border-radius: 50px 50px;
+      padding: 10px 10px;
+      cursor: pointer;
+     }
+     
+
+    
+    </style>
+</head>
+<body>
+   <div id="container">
+      <h2>Quate of the day</h2>
+     <span id="quate"> <i class="fa-solid fa-quote-left"></i> 
+      <i class="fa-solid fa-quote-right"></i> </span>
+     <span id="author"> </span><br>
+     <button>Generate</button>
+
+   </div>
+
+   <script>
+      quatelist=[{
+         quate:'There are some things you learn best in calm, and some in storm.',
+         author:'-Willa Cather'
+      },
+         {
+            quate:'Dream Dream Dream Dreams transform into thoughts and thoughts result in action.',
+            author:'-APJ Abdhul Kalam'
+         },
+         {
+            quate:'You know, Hobbes, some days even my lucky rocketship underpants dont help.',
+            author:'-Bill Watterson'
+         },
+          {
+            quate:'Life is never fair, and perhaps it is a good thing for most of us that it is not.',
+            author:'-Oscar Wilde'
+          },
+          {
+            quate:'Anyone who has never made a mistake has never tried anything new.',
+            author:'-Albert Einstein'
+          }
+
+            ]
+            btn=document.querySelector("button")
+            display=document.querySelector("#quate")
+            author=document.querySelector("#author")
+            btn.onclick=function(){
+               i=Math.floor(Math.random()*quatelist.length)
+               
+               display.innerHTML=`<i class="fa-solid fa-quote-left"></i> ${quatelist[i].quate} <i class="fa-solid fa-quote-right"></i>`
+               author.innerText=quatelist[i].author
+            }
+      
+      
+   </script>
+</body>
+<script>
+    
+
+</script>
+</html>

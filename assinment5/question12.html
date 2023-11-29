@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //12.check the array having elements are divisible 5 or not?
+        array=[]
+        length=parseInt(prompt("Enter the length"))
+        for(i=0;i<length;i++){
+              value=parseInt(prompt("ENter the value"))
+              array.push(value)
+        }
+        console.log(array)
+        function sai(){
+            for(i=0;i<length;i++){
+                if(array[i]%5==0){
+                    return true
+                }
+            }
+            return false
+            
+        }
+       
+        if(sai(array)){
+            console.log("5 divsibles are present")
+        }
+        else{
+            console.log("all are not divided by 5")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+         div{
+            border: 1px solid red;
+            margin-top: 25px;
+         }
+    </style>
+</head>
+<body>
+       <button>Click here to change background</button>
+        <h1 class="h1">this is h1</h1>
+        <p class="h1">this is p</p>
+      
+        <div id="div1" onclick="b()">
+            <h1 class="c1" id="h11">This is in the div h1</h1>
+            <p class="c1" id="h12">This is in the div p</p>
+        </div>
+        <div class="div_img">
+            <a href="" class="link1">link1</a>
+            <a href="">link2</a><br>
+            <img src="../html/884290-839561-829564-kl-rahul.avif" alt="" width="250px" height="250px" class="img" onclick="a()">
+            <img src="../html/dfc3mn0s_hardik-pandya-afp_625x300_08_October_19.webp" alt="" width="250px" height="250px"  class="img">
+        </div>
+        <div id="div2">
+            
+            <h1>This is H1 in div2</h1>
+            <p>This  is p1 in div2</p>
+            <p>This  is p2 in div2</p>
+        </div>
+        <div id="div3">
+            
+            <h1>This is H1 in div3</h1>
+            <p>This  is p1 in div3</p>
+            <p>This  is p2 in div3</p>
+        </div>
+
+   
+    <script>
+    
+
+   //addding the elements into html
+   add=document.createElement("h1")
+   div=document.getElementById("div1")
+   add.innerText = "This is h1 usingg js"
+   img1=document.querySelector(".img")
+   console.log(img1)
+   div1.append(add)
+   console.log(add)
+   del=document.getElementsByTagName("p")[5]
+   console.log(del)
+   del.remove()
+
+   a=function(){
+     img1.remove()
+   }    
+   b=function(e){
+    add.style.fontSize="10px"
+    console.log(e)
+   }
+   add.ondoubleclick=b
+
+   btn=document.querySelector("button")
+   ch=function(){
+      document.body.style.background="green"
+   }
+   ch.addEventLisner("onclick",ch)
+
+  
+   
+
+      
+
+     
+    </script>
+</body>
+</html>

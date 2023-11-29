@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button>Click me</button> -->
+  
+ <button>Add</button>
+    <script>
+        a='0123456789ABCDEF'
+       var color="#"
+       for (i=0;i<6;i++){
+         code=Math.floor(Math.random()*16)
+         color+=a[code]
+       }
+       console.log(color)
+
+       btn=document.querySelector("button")
+        
+       
+       btn.addEventListener('onclick',function(){
+      a='0123456789ABCDEF'
+      var color="#"
+      for (i=0;i<6;i++){
+         code=Math.floor(Math.random()*16)
+        color+=a[code]
+      }
+      console.log(color)
+      document.body.style.backgroundColor=color
+
+       //} ) 
+
+       a=function(){
+        a='0123456789ABCDEF'
+        var color="#"
+        for (i=0;i<6;i++){
+          code=Math.floor(Math.random()*16)
+         color+=a[code]
+        }
+        console.log(color)
+        document.body.style.backgroundColor=color
+
+       } 
+       btn.onclick=a
+
+       btn.addEventListener('onclick',a)
+       a=function(){
+        a='0123456789ABCDEF'
+        var color="#"
+        for (i=0;i<6;i++){
+          code=Math.floor(Math.random()*16)
+          color+=a[code]
+        }
+        console.log(color)
+        document.body.style.backgroundColor=color
+
+       } 
+     
+
+    </script>
+</body>
+</html>

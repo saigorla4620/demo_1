@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2.find the sum of the even elements in the array
+        a=[11,12,13,14,15,16,17,18,19,20]
+        sum=0
+        even=[]
+        for (i in a){
+            if(a[i]%2==0){
+                even.push(a[i])
+               sum+=a[i]
+
+            }
+        }
+        console.log("even numbers array is",even)
+        console.log("sum of even number in array is",sum)
+        average=sum/even.length
+        console.log("average of even numbers in array is",average)
+
+    </script>
+</body>
+</html>

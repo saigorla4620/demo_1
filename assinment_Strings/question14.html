@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("14.find the number of characters is repeated and it count in the string?")
+        function countCharacters(inputString) {
+            var charCount = {};
+        
+            // Iterate through each character in the input string
+            for (var i = 0; i < inputString.length; i++) {
+                var char = inputString[i];
+        
+                // Update the count in the charCount object
+                if (charCount[char]) {
+                    charCount[char]++;
+                } else {
+                    charCount[char] = 1;
+                }
+            }
+        
+            return charCount;
+        }
+        
+        var inputString = "saigorla";
+        var result = countCharacters(inputString);
+        
+        // Display the results
+        for (var char in result) {
+            if (result.hasOwnProperty(char)) {
+                console.log("Character '" + char + "' appears " + result[char] + " times.");
+            }
+        }
+        
+    </script>
+</body>
+</html>

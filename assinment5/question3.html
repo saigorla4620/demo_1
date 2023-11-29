@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3.find the how many odd elements in the array?
+        array=[]
+        length=parseInt(prompt("Enter the length"))
+        for(i=0;i<length;i++){
+              value=parseInt(prompt("Enter the value"))
+              array.push(value)
+        }
+        console.log(array)
+        odd_values=0
+        for (i in array){
+              if(array[i]%2==1){
+                odd_values++
+              }
+        }
+        console.log("odd values in the array are",odd_values)
+    </script>
+</body>
+</html>

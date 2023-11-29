@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    #head{
+        font-size: 35px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    body{
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 650px;
+        grid-template-rows: 50px;
+        justify-content: center;
+        justify-items: center;
+        align-content: center;
+        gap: 10px;
+    }
+    p{
+        margin-left: 25px;
+        font-size: 20px;
+        font-weight: 800;
+        
+    }
+    #container{
+        background-color: rgb(222, 132, 104);
+        height:200px;
+        width: 650px;
+        display: grid;
+        grid-template-columns: 50px 150px 150px;
+        grid-template-rows: 30px 30px ;
+        gap: 50px ;
+        align-content:center;
+        border-radius: 25px;
+        box-shadow: 2px 5px 10px 10px rgb(213, 90, 90);
+    
+    }
+    #input,#output{
+        background-color: white;
+        width: 150px;
+        border-radius: 5px;
+        border: none;
+
+    }
+  input:focus{
+    border: none;
+    outline: none;
+  }
+  option,select{
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+
+</style>
+<body>
+    <div id="head">Length Converter</div>
+     <div id="container">
+          <p>From:</p>
+          <select name="" id="from" onchange="convert()">
+            <option value="cm">centmeter</option>
+            <option value="in">inches</option>
+            <option value="ft">feet</option>
+            <option value="m">meter</option>
+            <option value="yard">yards</option>
+            <option value="km">kilometer</option>
+            <option value="mile">miles</option>
+          </select>
+          <input type="number" id="input" oninput="convert()"/>
+          <p>To:</p>
+          <select name="" id="to" onchange="convert()">
+            <option value="cm">centmeter</option>
+            <option value="in">inches</option>
+            <option value="ft">feet</option>
+            <option value="m">meter</option>
+            <option value="yard">yards</option>
+            <option value="km">kilometer</option>
+            <option value="mile">miles</option>
+          </select>
+          <input type="text" id="output" readonly>
+          
+     </div>
+<script>
+  function convert(){
+       input_option=document.querySelector("#from")
+       output_option=document.querySelector("#to")
+       input=document.querySelector("#input")
+       output=document.querySelector("#output")
+       let result;
+       switch(input_option.value){
+        case "cm":
+           switch(output_option.value){
+         
+             case "in":
+             result=input.value/2.54
+             break;
+             case "ft":
+             result=input.value*0.032808
+             break;
+             case "m":
+             result=input.value/100
+             break;
+             case "yard":
+              result=input.value*0.010936
+              break;
+              case "km":
+              result=input.value/100000
+              break;
+              case "mile":
+              result=input.value*0.0000062137
+              break;
+              default:
+              result=input.value
+              break;
+            }
+            break;
+         case "in":
+             switch(output_option.value){
+              case "cm":
+              result=input.value/0.39370
+              break;
+              case "ft":
+              result=input.value*0.083333
+              break;
+              case "m":
+              result=input.value/39.370
+              break;
+              case "yard":
+               result=input.value*0.027778
+               break;
+               case "km":
+               result=input.value/39370
+               break;
+               case "mile":
+               result=input.value*0.000015783
+               break;
+               default:
+               result=input.value
+               break;
+             }
+             break;
+          case "ft":
+            switch(output_option.value){
+              case "cm":
+              result=input.value/0.032808
+              break;
+              case "in":
+              result=input.value*12
+              break;
+              case "m":
+              result=input.value/3.2808
+              break;
+              case "yard":
+               result=input.value*0.33333
+               break;
+               case "km":
+               result=input.value/3280.8
+               break;
+               case "mile":
+               result=input.value*0.00018939
+               break;
+               default:
+               result=input.value
+               break;
+             }
+             break;
+          case "m":
+          switch(output_option.value){
+            case "cm":
+              result=input.value/0.01
+              break;
+              case "in":
+              result=input.value*39.370
+              break;
+              case "ft":
+              result=input.value*3.2808
+              break;
+              case "yard":
+               result=input.value*1.0936
+               break;
+               case "km":
+               result=input.value/1000
+               break;
+               case "mile":
+               result=input.value*0.00062137
+               break;
+               default:
+               result=input.value
+               break;
+          }
+          break;
+        case "yard":
+         switch(output_option.value){
+          case "cm":
+          result=input.value/0.010936
+          break;
+          case "in":
+          result=input.value*36
+          break;
+          case "ft":
+          result=input.value*3
+          break;
+          case "m":
+           result=input.value/1.0936
+           break;
+           case "km":
+           result=input.value/1093.6
+           break;
+           case "mile":
+           result=input.value*0.00056818
+           break;
+           default:
+           result=input.value
+           break;
+         }
+         break;
+        case "km":
+           switch(output_option.value){
+            case "cm":
+          result=input.value*100000
+          break;
+          case "in":
+          result=input.value*39370
+          break;
+          case "ft":
+          result=input.value*3280.8
+          break;
+          case "m":
+           result=input.value*1000
+           break;
+           case "yard":
+           result=input.value*1093.6
+           break;
+           case "mile":
+           result=input.value*0.62137
+           break;
+           default:
+           result=input.value
+           break;
+           }
+           break;
+        case "mile":
+            switch(output_option.value){
+              case "cm":
+              result=input.value/0.0000062137
+              break;
+              case "in":
+              result=input.value*63360
+              break;
+              case "ft":
+              result=input.value*5280
+              break;
+              case "m":
+               result=input.value/0.00062137
+               break;
+               case "yard":
+               result=input.value*1760
+               break;
+               case "km":
+               result=input.value/0.62137
+               break;
+               default:
+               result=input.value
+               break;
+            }
+
+      }
+       output.value=result
+
+       
+      
+    
+      }
+    
+ 
+      
+       
+  
+     </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+       width: 450px;
+       height: 500px;
+       background-color: rgb(238, 242, 246);
+       font-size: 20px;
+       padding: 15px 25px;
+       border-radius: 20px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;     
+       box-shadow: 10px 5px 10px 5px rgb(238, 242, 246);
+       
+
+}
+.input{
+    margin-top: 25px;
+     display: flex;
+     flex-direction: column;
+     
+}
+input{
+    height: 35px;
+    width: 250px;
+    border:1px solid;
+    outline: none;
+}
+input:hover{
+    
+    outline: none;
+   
+    
+}
+button{
+    padding: 10px 10px;
+    background-color: rgb(255, 0, 8);
+    outline: none;
+    border: none;
+}
+button:hover{
+    border: none;
+    outline: none;
+}
+.foot{
+    margin-top:25px ;
+    text-align: center;
+}
+.fa-google{
+    font-size: 20px;
+    color: red;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+.fa-square-facebook{
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+    
+}
+.fa-linkedin{
+    font-size: 20px;
+    color: rgb(34, 161, 204);
+    margin-left: 10px;
+    cursor: pointer;
+}
+p{
+    font-size: 12px;
+    margin-top: 25px;
+
+}
+#signup{
+    font-size: 16px;
+    text-decoration:underline;
+    font-weight:600;
+    cursor: pointer;
+}
+
+#login{
+    font-size: 16px;
+    text-decoration:underline;
+    font-weight:600;
+    cursor: pointer;
+}

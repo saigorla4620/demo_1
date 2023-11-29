@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //9.print the even index elements/value in the array using while loop
+        a=[1,2,3,4,5,6,7,8,9,10]
+        even_index_elements=[]
+        console.log("Array elemts are",a)
+        i=0
+        while (i<a.length){
+            if(i%2==0){
+                console.log(a[i])
+                even_index_elements.push(a[i])
+            }
+            i++
+        }
+        console.log("even index elements are",even_index_elements)
+    </script>
+</body>
+</html>

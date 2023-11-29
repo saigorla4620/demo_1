@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //.print the minimum even index element in the array.
+        a=[100,20,500,40,800,400,60,55,1000,]
+        even_index_elements=[]
+        console.log("Array elemts are",a)
+        i=0
+        while (i<a.length){
+            if(i%2==0){
+                console.log(a[i])
+                even_index_elements.push(a[i])
+            }
+            i++
+        }
+        console.log("even index elements are",even_index_elements)
+        min=even_index_elements[0]
+        for (j=0;j<even_index_elements.length;j++){
+            if(min>even_index_elements[j+1]){
+                min=even_index_elements[j+1]
+            }
+        }
+        console.log(min)
+    </script>
+</body>
+</html>

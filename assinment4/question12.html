@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //12.fine the average of the numbers which are divisible by 2,3 and 4
+        length=parseInt(prompt("Enter the length"))
+        a=[]
+        for (i=0;i<length;i++){
+           value=parseInt(prompt("Enter the value "))
+            a.push(value)
+            
+
+        }
+        console.log(a)
+        sum=0
+        avg=0
+        for (i of a){
+            if (i%2==0 && i%3==0 && i%4==0){
+                 sum+=i
+                 avg++
+            }
+        }
+        console.log(sum/avg)
+    </script>
+</body>
+</html>

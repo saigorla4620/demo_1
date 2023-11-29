@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //inheritence
+        //inheritence means to inherite the data form parent to child 
+       // types of inheritence
+       //single
+       //multilevel
+       //hirarhical
+        class parent{
+        constructor(name,age){
+             this.name=name
+             this.age=age
+
+
+        }
+        studying(){
+            console.log(`${this.name} is studying`)
+        }
+       }
+       class child1 extends parent{
+         constructor(name,age){
+          super(name,age)
+           
+         }
+       }
+       obj1=new child1('sai',24)
+       console.log(obj1)
+       obj1.studying() 
+
+      //polymorphism   
+      // poly means   many
+      //morphism means forms
+      //In ploymorphism data will be have many forms.
+      
+
+
+      
+
+
+
+
+
+    </script>
+</body>
+</html>

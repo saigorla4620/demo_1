@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class mobile{
+        constructor(brand,color,charge){
+            this.brand=brand
+            this.color=color
+            this.intialcharge=charge
+            var currentcharge=0
+           var plugin=function(charge){
+               return currentcharge=this.intialcharge+charge
+            }
+             this.fullcharge=function(c){
+                return plugin(c)
+            }
+        }
+
+      }
+       obj1=new mobile("samsung","red",50)
+       obj1.fullcharge(30)
+        console.log(obj1.charge)
+     </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //7.print the odd elements in the given array using for in loop.
+        a=[20,21,21,25,26,24,28,29,23]
+        console.log("Array elements are", a)
+        odd_elements=[]
+        for (i in a){
+            if(a[i]%2==1){
+               console.log(a[i])
+               odd_elements.push(a[i])
+            }
+        }
+        console.log("odd elements in the array are",odd_elements)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./weather.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Weather App</h1>
+        </div>
+        <div class="input">
+            <input type="text" id="location" placeholder="location">
+            <input type="button" value="Get" id="btn">
+        </div>
+        <div class="info">
+            <img src="https://cdn.jim-nielsen.com/ios/1024/weather-2019-02-07.png" alt="not found" width="100px" height="100px"/>
+            <div class="temperature">
+                <span class="temp" id="temp">25</span>
+                <span class="degree">&deg;</span><span id="c">C</span>
+            </div>
+                <div class="description" id="discription">Cloudy</div>
+                <div class="location" id="location-des">Hyderabad</div>
+            </div>
+    </div>
+    <script src="./weather.js"></script>
+</body>
+</html>
